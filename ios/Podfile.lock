@@ -1383,7 +1383,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-safe-area-context (5.4.0):
+  - react-native-safe-area-context (5.5.2):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1398,8 +1398,8 @@ PODS:
     - React-hermes
     - React-ImageManager
     - React-jsi
-    - react-native-safe-area-context/common (= 5.4.0)
-    - react-native-safe-area-context/fabric (= 5.4.0)
+    - react-native-safe-area-context/common (= 5.5.2)
+    - react-native-safe-area-context/fabric (= 5.5.2)
     - React-NativeModulesApple
     - React-RCTFabric
     - React-renderercss
@@ -1409,7 +1409,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-safe-area-context/common (5.4.0):
+  - react-native-safe-area-context/common (5.5.2):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1433,7 +1433,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-safe-area-context/fabric (5.4.0):
+  - react-native-safe-area-context/fabric (5.5.2):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -2321,7 +2321,7 @@ SPEC CHECKSUMS:
   React-Mapbuffer: c3f4b608e4a59dd2f6a416ef4d47a14400194468
   React-microtasksnativemodule: 054f34e9b82f02bd40f09cebd4083828b5b2beb6
   react-native-keyboard-controller: a1ae8c626dd4accd352e32b980af9c5d9c4ca82b
-  react-native-safe-area-context: 562163222d999b79a51577eda2ea8ad2c32b4d06
+  react-native-safe-area-context: 7e926a200d4bc9c56562275743705c6b56176455
   react-native-skia: 99362ce77dff006719636c97f16c9713e3ec221e
   React-NativeModulesApple: 2c4377e139522c3d73f5df582e4f051a838ff25e
   React-oscompat: ef5df1c734f19b8003e149317d041b8ce1f7d29c
@@ -2363,4 +2363,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 414b400c210ed161800009d7cac8e3709df58544
 
-COCOAPODS: 1.16.2
+COCOAPODS: 1.15.2
