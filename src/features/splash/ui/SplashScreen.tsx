@@ -12,7 +12,7 @@ import {useGetFactQuery} from 'core/services/ExampleApi';
 const SplashScreen = () => {
   const styles = useStyles();
   const navigation = useNavigation();
-  const {data, isLoading, error} = useGetFactQuery('');
+  const {data, isLoading} = useGetFactQuery('');
   if (isLoading) {
     return <Text>LOADING</Text>;
   }
