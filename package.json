@@ -7,9 +7,9 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test:editorconfig": "editorconfig-checker ./src",
+    "test:editorconfig": "editorconfig-checker -exclude \".DS_Store\" ./src",
     "test:prettier:fix": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
-    "test:eslint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'\"'",
+    "test:eslint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
     "prepare": "husky",
     "postinstall": "patch-package"
   },
