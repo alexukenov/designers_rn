@@ -1,8 +1,8 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 import {KeyboardProvider} from 'react-native-keyboard-controller';
-import {store} from 'core/store/store';
-import {Navigation} from 'core/navigation/Navigation';
+import {store} from 'root/store/store';
+import {Navigation} from 'root/navigation/Navigation';
 
 function App(): React.JSX.Element {
   return (

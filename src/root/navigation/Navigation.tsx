@@ -1,7 +1,7 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createStaticNavigation, StackActions} from '@react-navigation/native';
-import SplashScreen from '../../features/splash/ui/SplashScreen';
-import PhoneScreen from '../../features/auth/ui/PhoneScreen';
+import SplashScreen from 'features/splash/ui/SplashScreen';
+import PhoneScreen from 'features/auth/ui/PhoneScreen';
 
 export const Screens = {
   Splash: 'Splash',

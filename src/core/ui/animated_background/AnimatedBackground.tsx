@@ -24,22 +24,28 @@ export const AnimatedBackground = () => {
     return [leftColor.value, centerColor.value, rightColor.value];
   }, []);
 
+  const transform = useDerivedValue(() => {
+    return [{rotate: rotate.value}];
+  }, []);
+
   const getRandomColor = useCallback(() => {
     const randomIndex = Math.floor(Math.random() * avaliableColors.length);
     return avaliableColors[randomIndex];
   }, [avaliableColors]);
+
   useEffect(() => {
-    rotate.value = withRepeat(withTiming(10, {duration: 3000, easing: Easing.linear}), -1, true);
+    rotate.value = withRepeat(withTiming(20, {duration: 30000, easing: Easing.linear}), -1, true);
     leftColor.value = withRepeat(withTiming(getRandomColor(), {duration: 3000}), -1, true);
     centerColor.value = withRepeat(withTiming(getRandomColor(), {duration: 3000}), -1, true);
     rightColor.value = withRepeat(withTiming(getRandomColor(), {duration: 3000}), -1, true);
   }, [rotate, leftColor, rightColor, getRandomColor, centerColor]);
+
   return (
     <Canvas style={styles.gradient}>
       <Rect x={0} y={0} width={dimensions.width} height={dimensions.height}>
         <LinearGradient
           start={vec(0, 0)}
-          transform={[{rotateY: rotate.value}]}
+          transform={transform}
           end={vec(dimensions.width, dimensions.height)}
           colors={colors}
         />

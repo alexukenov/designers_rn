@@ -6,10 +6,15 @@ import {useStyles} from './useStyles';
 import I18n from 'i18n/i18n';
 import {KeyboardAvoidingView} from 'react-native-keyboard-controller';
 import {AnimatedBackground} from 'core/ui/animated_background/AnimatedBackground';
-import PhoneInput from 'components/PhoneInput';
+import PhoneInput from 'core/ui/phone_input/PhoneInput';
+import {useDispatch, useSelector} from 'react-redux';
+import {RootState} from 'root/store/store';
+import {setPhone} from '../state/testSlice';
 
 const PhoneScreen = () => {
   const styles = useStyles();
+  const phone = useSelector((state: RootState) => state.phone.phone);
+  const dispatch = useDispatch();
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -22,7 +27,7 @@ const PhoneScreen = () => {
           <IconLogo />
         </View>
         <Text style={styles.title}>{I18n.t('enter_phone_number')}</Text>
-        <PhoneInput />
+        <PhoneInput phone={phone} setPhone={value => dispatch(setPhone(value))} />
         <TouchableOpacity activeOpacity={0.5} style={styles.buttonContainer}>
           <Text style={styles.buttonText}>{I18n.t('request_code')}</Text>
         </TouchableOpacity>

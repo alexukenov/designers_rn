@@ -2,6 +2,7 @@ package ru.designers
 
 import android.app.Application
 import com.AlexanderZaytsev.RNI18n.RNI18nPackage
+import com.lugg.RNCConfig.RNCConfigPackage
 import com.facebook.react.PackageList
 import com.facebook.react.ReactApplication
 import com.facebook.react.ReactHost
@@ -20,6 +21,7 @@ class MainApplication : Application(), ReactApplication {
         override fun getPackages(): List<ReactPackage> =
             PackageList(this).packages.apply {
                 add(RNI18nPackage())
+                add(RNCConfigPackage())
               // Packages that cannot be autolinked yet can be added manually here, for example:
               // add(MyReactNativePackage())
             }

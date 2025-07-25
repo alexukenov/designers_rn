@@ -1,12 +1,12 @@
 import {configureStore} from '@reduxjs/toolkit';
 import {setupListeners} from '@reduxjs/toolkit/query';
-import counterReducer from './testSlice';
-import {exampleApi} from 'core/services/ExampleApi';
+import phoneReducer from 'features/auth/state/testSlice';
+import {exampleApi} from 'features/splash/network/ExampleApi';
 
 export const store = configureStore({
   reducer: {
     [exampleApi.reducerPath]: exampleApi.reducer,
-    counter: counterReducer,
+    phone: phoneReducer,
   },
   middleware: getDefaultMiddleware => getDefaultMiddleware().concat(exampleApi.middleware),
 });

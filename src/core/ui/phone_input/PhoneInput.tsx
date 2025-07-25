@@ -1,11 +1,15 @@
 import React from 'react';
-import {useGlobalStyles} from '../core/ui/GlobalStyles';
+import {useStyles} from './useStyles';
 import MaskInput from 'react-native-mask-input';
 import useColors from 'core/ui/theme/Colors';
 
-const PhoneInput = () => {
-  const [phone, setPhone] = React.useState('');
-  const styles = useGlobalStyles();
+type Props = {
+  phone: string;
+  setPhone: (value: string) => void;
+};
+
+const PhoneInput = ({phone, setPhone}: Props) => {
+  const styles = useStyles();
   const colors = useColors();
 
   // const getPhoneMask = (currentPhone: string) => {

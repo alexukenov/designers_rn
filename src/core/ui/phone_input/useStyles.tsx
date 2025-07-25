@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 import useFonts from 'core/ui/theme/Fonts';
 
-export const useGlobalStyles = () => {
+export const useStyles = () => {
   const fonts = useFonts();
   return StyleSheet.create({
     field: {
